@@ -11,10 +11,11 @@
     var url = document.location.toString();
     var urlParmStr = url.slice(url.indexOf('=')+1);
     var ua = navigator.userAgent.toLowerCase();
-    var isQQ = ua.indexOf('qq') != -1;
-    var isWeixin = ua.indexOf('micromessenger') != -1;
-    var isAndroid = ua.indexOf('android') != -1;
-    var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+    // 禁用检测	    
+    var isQQ = ua.indexOf('qq-test') != -1;
+    var isWeixin = ua.indexOf('micromessenger-test') != -1;
+    var isAndroid = ua.indexOf('android-test') != -1;
+    var isIos = (ua.indexOf('iphone-test') != -1) || (ua.indexOf('ipad') != -1);
 
     var notice_openBrowser = "<h2>请点击右上角，通过浏览器打开本页面。</h2>"
 
@@ -31,7 +32,7 @@
     } else {
     // 不是微信客户端，直接可以访问链接
     if (urlParmStr == url){
-        urlParmStr = "https://www.qian.blue";
+        urlParmStr = "https://www.maopai.blue";
     }
     console.log(urlParmStr);
     location.href=urlParmStr;
